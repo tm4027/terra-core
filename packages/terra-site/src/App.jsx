@@ -1,7 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import {
+  Link
+} from 'react-router';
 import Base from 'terra-base';
 import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
@@ -18,41 +20,49 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+const locale = document.getElementsByTagName( 'html' )[ 0 ].getAttribute( 'lang' );
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor( props ) {
+    super( props );
     this.state = {
       isOpen: window.innerWidth >= 768,
       locale,
       theme: '',
     };
-    this.handleThemeChange = this.handleThemeChange.bind(this);
-    this.handleLocaleChange = this.handleLocaleChange.bind(this);
-    this.handleToggleClick = this.handleToggleClick.bind(this);
-    this.handleResetScroll = this.handleResetScroll.bind(this);
+    this.handleThemeChange = this.handleThemeChange.bind( this );
+    this.handleLocaleChange = this.handleLocaleChange.bind( this );
+    this.handleToggleClick = this.handleToggleClick.bind( this );
+    this.handleResetScroll = this.handleResetScroll.bind( this );
   }
 
-  handleLocaleChange(e) {
-    this.setState({ locale: e.target.value });
+  handleLocaleChange( e ) {
+    this.setState( {
+      locale: e.target.value
+    } );
   }
 
-  handleThemeChange(e) {
-    this.setState({ theme: e.target.value });
+  handleThemeChange( e ) {
+    this.setState( {
+      theme: e.target.value
+    } );
   }
 
   handleToggleClick() {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState( {
+      isOpen: !this.state.isOpen
+    } );
   }
 
   handleResetScroll() {
-    const scrollParent = document.getElementById('site-content-section').parentNode;
-    if (scrollParent && scrollParent.parentNode) {
+    const scrollParent = document.getElementById( 'site-content-section' ).parentNode;
+    if ( scrollParent && scrollParent.parentNode ) {
       scrollParent.parentNode.scrollTop = 0;
     }
-    if (window.innerWidth < 768) {
-      this.setState({ isOpen: false });
+    if ( window.innerWidth < 768 ) {
+      this.setState( {
+        isOpen: false
+      } );
     }
   }
 
@@ -69,13 +79,14 @@ class App extends React.Component {
         isSelectable
         buttons={[
           <ButtonGroup.Button isSelected text="ltr" key="ltr" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} />,
-          <ButtonGroup.Button text="rtl" key="rtl" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} />,
-        ]}
-      />
-    );
+      <ButtonGroup.Button text="rtl" key="rtl" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} />,
+    ]
+  }
+  />
+);
 
-    const localeContent = (
-      <div className={styles['site-locale']}>
+const localeContent = (
+  <div className={styles['site-locale']}>
         <label htmlFor="locale"> Locale: </label>
         <select value={this.state.locale} onChange={this.handleLocaleChange}>
           <option value="en">en</option>
@@ -88,38 +99,38 @@ class App extends React.Component {
           <option value="fi-FI">fi-FI</option>
         </select>
       </div>
-    );
+);
 
-    let themeSwitcher;
+let themeSwitcher;
 
-    function supportsCSSVars() {
-      return window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)');
-    }
+function supportsCSSVars() {
+  return window.CSS && window.CSS.supports && window.CSS.supports( '(--fake-var: 0)' );
+}
 
-    if (supportsCSSVars()) {
-      themeSwitcher = (
-        <div className={styles['site-theme']}>
+if ( supportsCSSVars() ) {
+  themeSwitcher = (
+    <div className={styles['site-theme']}>
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
             <option value="cerner-mock-theme">Mock Theme</option>
           </select>
         </div>
-      );
-    } else {
-      themeSwitcher = (
-        <div />
-      );
-    }
+  );
+} else {
+  themeSwitcher = (
+    <div />
+  );
+}
 
-    const navHeader = (
-      <div className={styles['site-nav-header']}>
+const navHeader = (
+  <div className={styles['site-nav-header']}>
         <Link onClick={this.handleResetScroll} to="/">Home</Link>
       </div>
-    );
+);
 
-    const panelContent = (
-      <ContentContainer header={navHeader} className={styles['site-panel']} fill>
+const panelContent = (
+  <ContentContainer header={navHeader} className={styles['site-panel']} fill>
         <List className={styles['site-nav']}>
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/app-delegate">App Delegate</Link>} />
@@ -132,6 +143,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/error-page">error-page</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form">Form</Link>} />
           <List.Item content={<FormComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/grid">Grid</Link>} />
@@ -160,47 +172,47 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/tests">Tests</Link>} />
         </List>
       </ContentContainer>
-    );
+);
 
-    // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
-    // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
-    const mainContent = (
-      <ThemeProvider themeName={this.state.theme}>
-        <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
-          {this.props.children}
-        </Base>
-      </ThemeProvider>
-    );
+// Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
+// Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
+const mainContent = (
+  <ThemeProvider themeName={this.state.theme}>
+    <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
+      {this.props.children}
+    </Base>
+  </ThemeProvider>
+);
 
-    const utilityContent = (
-      <div className={styles['site-utility']}>
-        {themeSwitcher}
-        {localeContent}
-        {bidiContent}
-      </div>
-    );
+const utilityContent = (
+  <div className={styles['site-utility']}>
+    {themeSwitcher}
+    {localeContent}
+    {bidiContent}
+  </div>
+);
 
-    const applicationHeader = (
-      <div className={styles['site-header']}>
-        {toggleContent}
-        {utilityContent}
-      </div>
-    );
+const applicationHeader = (
+  <div className={styles['site-header']}>
+    {toggleContent}
+    {utilityContent}
+  </div>
+);
 
-    return (
-      <ContentContainer className={styles.app} header={applicationHeader} fill>
-        <SlidePanel
-          mainContent={mainContent}
-          panelContent={panelContent}
-          panelBehavior="squish"
-          panelPosition="start"
-          panelSize="small"
-          isOpen={this.state.isOpen}
-          fill
-        />
-      </ContentContainer>
-    );
-  }
+return (
+  <ContentContainer className={styles.app} header={applicationHeader} fill>
+    <SlidePanel
+      mainContent={mainContent}
+      panelContent={panelContent}
+      panelBehavior="squish"
+      panelPosition="start"
+      panelSize="small"
+      isOpen={this.state.isOpen}
+      fill
+    />
+  </ContentContainer>
+);
+}
 }
 
 App.propTypes = propTypes;

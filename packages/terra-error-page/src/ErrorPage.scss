@@ -1,0 +1,31 @@
+@import './variables';
+@import './mixins';
+
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .error-page {
+
+    .button {
+      flex: 0 0 auto;
+      padding-top: 0.2857rem;
+      text-align: center;
+    }
+
+    .card {
+      align-items: center;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .glyph {
+      padding-bottom: 0.2857rem;
+      padding-top: 1.429rem;
+      color: #868a8c;
+      display: block;
+      margin: auto;
+    }
+  }
+  /* stylelint-enable */
+}

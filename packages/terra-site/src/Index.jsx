@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
+import {
+  Router,
+  Route,
+  hashHistory,
+  IndexRoute,
+  Redirect
+} from 'react-router';
 import App from './App';
 import Home from './Home';
 
@@ -16,6 +22,7 @@ import CardExamples from './examples/card/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
+import ErrorPageExamples from './examples/error-page/Index';
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -53,6 +60,7 @@ import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import ErrorPageTestLink from 'terra-error-page/tests/nightwatch/ErrorPageTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
@@ -88,7 +96,7 @@ import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleB
 
 import TestLinks from './TestLinks';
 
-ReactDOM.render((
+ReactDOM.render( (
   <Router history={hashHistory}>
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
@@ -104,6 +112,7 @@ ReactDOM.render((
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
+      <Route path="error-page" component={ErrorPageExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
@@ -140,6 +149,7 @@ ReactDOM.render((
     {CardTestRoutes}
     {DatePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {ErrorPageTestLink}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}
@@ -173,4 +183,4 @@ ReactDOM.render((
     {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
   </Router>
-), document.getElementById('root'));
+), document.getElementById( 'root' ) );

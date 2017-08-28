@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 :local {
   /* stylelint-disable selector-class-pattern */
 
@@ -29,7 +31,11 @@
 
   .label {
     display: block;
-    font-weight: bold;
+    font-size: 14pt;
+    line-height: 18pt;
+    color: #868A8C;
+    font-family: "Roboto";
+    font-style: normal;
     margin-bottom: 0.357em;
   }
 
