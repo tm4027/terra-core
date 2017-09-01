@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.5.0 - (August 31, 2017)
+------------------
+### Added
+* Added default border, margin, and padding reset to img
+
 1.4.0 - (August 15, 2017)
 ------------------
 ### Changed

@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+1.5.0 - (August 31, 2017)
+------------------
+### Added
+* Added default line-height style to field help text
+* Added default line-height style to field error text
+
 1.4.0 - (August 15, 2017)
 ------------------
 ### Changed
