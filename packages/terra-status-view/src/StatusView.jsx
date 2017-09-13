@@ -16,7 +16,7 @@ const statusTypes = ['clinical', 'no_data', 'no_result', 'not_authorized', 'sens
 const cx = classNames.bind(styles);
 
 const iconHeadingMapping = {
-  statusTypes: {
+  clinical: {
     icon: <IconSuccess width="100px" height="100px" />, // TODO
     heading: 'TBD', //TODO
   },
