@@ -98,32 +98,22 @@ const StatusView = ({
   let finalHeading;
   let finalIcon;
 
-  finalHeading = heading;
-  finalIcon = icon;
-
   if (type !== 'custom') {
     finalHeading = iconHeadingMapping[type].heading;
     finalIcon = iconHeadingMapping[type].icon;
+  } else {
+    finalHeading = heading;
+    finalIcon = icon;
   }
 
   let iconSection;
   if (!isIconHidden) {
     iconSection = <div className={cx('icon')}>{finalIcon}</div>;
   }
-  let headingSection;
-  if (finalHeading) {
-    headingSection = <p className={cx('heading')}>{finalHeading}</p>;
-  }
 
-  let subtextSection;
-  if (subtext) {
-    subtextSection = <p className={cx('subtext')}>{subtext}</p>;
-  }
-
-  let subtextContentSection;
-  if (subtextContent) {
-    subtextContentSection = (<div className={cx('subtext-content')}>{subtextContent}</div>);
-  }
+  const headingSection = <p className={cx('heading')}>{finalHeading}</p>;
+  const subtextSection = <p className={cx('subtext')}>{subtext}</p>;
+  const subtextContentSection = (<div className={cx('subtext-content')}>{subtextContent}</div>);
 
   let divider;
   if (subtextContent) {
@@ -139,10 +129,10 @@ const StatusView = ({
   return (
     <div {...customProps} className={StatusViewClassNames}>
       {iconSection}
-      {headingSection}
-      {subtextSection}
+      {finalHeading && headingSection}
+      {subtext && subtextSection}
       {divider}
-      {subtextContentSection}
+      {subtextContent && subtextContentSection}
     </div>
   );
 };
