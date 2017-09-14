@@ -102,6 +102,7 @@ module.exports = {
       'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
       moment: path.resolve(__dirname, 'node_modules/moment'),
       'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      'terra-icon/lib/icon/IconAdd': path.resolve(__dirname, 'node_modules/terra-consumer-icon/lib/icon/IconColorHeartRate'),
     },
   },
   output: {
