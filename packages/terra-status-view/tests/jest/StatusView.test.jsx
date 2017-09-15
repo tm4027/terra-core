@@ -121,12 +121,12 @@ describe('StatusView', () => {
       subtextContent={subtextContent}
     />);
     const wrapper = shallow(testComponent);
-    // console.log(wrapper);
-    // expect(wrapper.type()).toEqual('div');
     expect(wrapper.childAt(0).hasClass('icon')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('heading')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('subtext')).toEqual(true);
     expect(wrapper.childAt(3).hasClass('divider')).toEqual(true);
     expect(wrapper.childAt(4).hasClass('subtext-content')).toEqual(true);
   });
+
+  // TODO add test for theming
 });
