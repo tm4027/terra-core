@@ -1,11 +1,403 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StatusView should render a default component 1`] = `
+exports[`StatusView should render a custom status view component 1`] = `
 <div
   className="status-view"
 >
   <div
     className="icon"
+  >
+    <IconClose
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    custom Heading
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
   />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a custom status view component without icon 1`] = `
+<div
+  className="status-view"
+>
+  <p
+    className="heading"
+  >
+    custom Heading
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a error status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconAlert
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    Error
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a error_loading status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconError
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    Error Loading
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a no_data status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconAdd
+      data-name="Layer 1"
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    No Data
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a no_data status view component without icon 1`] = `
+<div
+  className="status-view"
+>
+  <p
+    className="heading"
+  >
+    No Data
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a no_internet status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconAbnormal
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    No Internet Connection
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a no_result status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconAddPerson
+      data-name="Layer 1"
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    No Matching Results
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a not_authorized status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconAway
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    Not Authorized
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
+</div>
+`;
+
+exports[`StatusView should render a sensitive_data status view component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  >
+    <IconCancel
+      data-name="Layer 1"
+      height="100px"
+      viewBox="0 0 48 48"
+      width="100px"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <p
+    className="heading"
+  >
+    Sensitive Data
+  </p>
+  <p
+    className="subtext"
+  >
+    Description comes here
+  </p>
+  <hr
+    className="divider"
+    style={
+      Object {
+        "margin": -1,
+      }
+    }
+  />
+  <div
+    className="subtext-content"
+  >
+    <p>
+      Buttons or other controls comes here for next action
+    </p>
+  </div>
 </div>
 `;
