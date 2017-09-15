@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusView should render a default component 1`] = `
+<div
+  className="status-view"
+>
+  <div
+    className="icon"
+  />
+</div>
+`;
