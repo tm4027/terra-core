@@ -3,11 +3,14 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a clinical status-view': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/clinical`)
-      .assert.elementPresent('#statusView')
-      .assert.elementPresent('#statusView IconSuccess')
-      .assert.attributeEquals('#statusView p', 'TBD');
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/clinical`);
+    browser.expect.element('#statusView').to.be.an('div');
+    // browser.expect.element('body').to.be.present.before(1000)
+    // browser.expect.element('ThemeProvider').to.be.visible;
+    // browser.expect.element('#statusView').text.to.contain('TBD');
+      // .assert.elementPresent('#statusView');
+      // .assert.elementPresent('#statusView IconSuccess')
+      // .assert.attributeEquals('#statusView p', 'TBD');
   },
 
   // 'Displays a custom status-view': (browser) => {
