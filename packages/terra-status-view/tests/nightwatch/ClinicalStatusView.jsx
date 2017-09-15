@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import StatusView from 'terra-status-view';
 import ThemeProvider from 'terra-theme-provider';
+import StatusView from '../../src/StatusView';
+
 
 const subtextContent = (<p>Buttons or other controls comes here for next action</p>);
 const theme = 'cerner-consumer-theme';
