@@ -1,5 +1,17 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import StatusView from '../../src/StatusView';
 
-import StatusView from '../../lib/StatusView';
+const DefaultStatusView = () => (
+  <div>
+    <StatusView
+      heading="default Heading"
+      type="custom"
+      subtext="Description comes here"
+      id="statusView"
+      isIconHidden
+    />
+  </div>
+);
 
-export default () => <StatusView />;
+export default DefaultStatusView;

@@ -5,6 +5,7 @@ import { Route } from 'react-router';
 import StatusViewTests from './StatusViewTests';
 
 // Test Cases
+import DefaultStatusView from './DefaultStatusView';
 import ClinicalStatusView from './ClinicalStatusView';
 import CustomStatusView from './CustomStatusView';
 import ErrorLoadingStatusView from './ErrorLoadingStatusView';
@@ -18,6 +19,7 @@ import SensitiveDataStatusView from './SensitiveDataStatusView';
 const routes = (
   <div>
     <Route path="/tests/status-view-tests" component={StatusViewTests} />
+    <Route path="/tests/status-view-tests/default" component={DefaultStatusView} />
     <Route path="/tests/status-view-tests/clinical" component={ClinicalStatusView} />
     <Route path="/tests/status-view-tests/custom" component={CustomStatusView} />
     <Route path="/tests/status-view-tests/no_data" component={NoDataStatusView} />

@@ -10,7 +10,15 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('p').text.to.equal('TBD');
     browser.expect.element('#statusView').text.to.contain('Description comes here');
     browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
-    // browser.expect.element('#main').to.have.css('display').which.equals('block');
+  },
+
+  'Displays a default status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/default`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.not.be.present;
+    browser.expect.element('p').text.to.equal('default Heading');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.not.contain('Buttons or other controls comes here for next action');
   },
 
   'Displays a custom status-view': (browser) => {
