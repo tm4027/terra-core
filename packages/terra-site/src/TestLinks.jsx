@@ -45,6 +45,7 @@ const TestLinks = () => (
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>
       <li><Link to="/tests/slide-group-tests">SlideGroup Tests</Link></li>
       <li><Link to="/tests/slide-panel-tests">SlidePanel Tests</Link></li>
+      <li><Link to="/tests/status-view-tests">Status View Tests</Link></li>
       <li><Link to="/tests/status-tests">Status Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
       <li><Link to="/tests/text-tests">Text Tests</Link></li>

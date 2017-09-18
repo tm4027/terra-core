@@ -88,6 +88,7 @@ import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFie
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import StatusViewTestRoutes from 'terra-status-view/tests/nightwatch/StatusViewTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
@@ -166,6 +167,7 @@ ReactDOM.render((
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
     {StatusTestRoutes}
+    {StatusViewTestRoutes}
     {TableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}

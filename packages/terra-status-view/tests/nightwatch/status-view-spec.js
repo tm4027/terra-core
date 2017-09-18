@@ -1,11 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
+/* eslint-disable no-unused-expressions */
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a clinical status-view': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/clinical`);
-    browser.expect.element('#statusView').to.be.an('StatusView');
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/clinical`)
+      .expect.element('#statusView').to.be.present;
       // .assert.elementPresent('#statusView IconSuccess')
+      // .expect.element('#statusView');
       // .expect.element('p').to.have.attribute('class').which.contains('header')
       // .expect.element('p').to.have.attribute('class').which.contains('subtext')
       // .expect.element('p').to.have.attribute('class').which.contains('subtext-content')
