@@ -4,63 +4,85 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 /* eslint-disable no-unused-expressions */
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a clinical status-view': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/clinical`)
-      .expect.element('#statusView').to.be.present;
-      // .assert.elementPresent('#statusView IconSuccess')
-      // .expect.element('#statusView');
-      // .expect.element('p').to.have.attribute('class').which.contains('header')
-      // .expect.element('p').to.have.attribute('class').which.contains('subtext')
-      // .expect.element('p').to.have.attribute('class').which.contains('subtext-content')
-      // .assert.attributeEquals('#statusView p', 'TBD')
-      // .assert.attributeEquals('#statusView p', 'Description comes here')
-      // .assert.attributeEquals('#statusView p', 'Buttons or other controls comes here for next action');
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/clinical`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('TBD');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+    // browser.expect.element('#main').to.have.css('display').which.equals('block');
   },
 
-  // 'Displays a custom status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/custom`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a no_data status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/no_data`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a no_result status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/no_result`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a not_authorized status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/not_authorized`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a sensitive_data status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/sensitive_data`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a error status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/error`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a no_internet status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/no_internet`)
-  //     .assert.elementPresent('#statusView');
-  // },
-  //
-  // 'Displays a error_loading status-view': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-view-tests/error_loading`)
-  //     .assert.elementPresent('#statusView');
-  // },
+  'Displays a custom status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/custom`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('custom Heading');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+    // browser.expect.element('#main').to.have.css('display').which.equals('block');
+  },
+
+  'Displays a no_data status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/no_data`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('No Data');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a no_result status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/no_result`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('No Matching Results');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a not_authorized status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/not_authorized`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('Not Authorized');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a sensitive_data status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/sensitive_data`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('Sensitive Data');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a error status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/error`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('Error');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a no_internet status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/no_internet`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('No Internet Connection');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
+
+  'Displays a error_loading status-view': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/error_loading`);
+    browser.expect.element('#statusView').to.be.present;
+    browser.expect.element('svg').to.be.present;
+    browser.expect.element('p').text.to.equal('Error Loading');
+    browser.expect.element('#statusView').text.to.contain('Description comes here');
+    browser.expect.element('#statusView').text.to.contain('Buttons or other controls comes here for next action');
+  },
 });
