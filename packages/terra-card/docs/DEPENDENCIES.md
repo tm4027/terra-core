@@ -4,6 +4,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
+| mock-themes | file:../../../mock-themes | -- | Mock themes for Terra UI |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-base | ^2.4.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-mixins | ^1.10.0 | -- | terra-mixins |

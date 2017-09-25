@@ -1,5 +1,6 @@
-@import '~terra-mixins';
-@import './themes';
+@if index($bundled-themes, 'consumer') or $default-theme == 'consumer' {
+  @include terra-consumer-card-theme;
+}
 
 :local {
   .card {
