@@ -1,5 +1,5 @@
-@if index($bundled-themes, 'consumer') or $default-theme == 'consumer' {
-  @include terra-consumer-card-theme;
+@if mixin-exists(cerner-consumer-card-theme) {
+  @include cerner-consumer-card-theme;
 }
 
 :local {

@@ -63,7 +63,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/mock-themes/src/consumer/index.scss'))}"; $default-theme: consumer; $bundled-themes: mock, consumer;`,
+            data: `@import "${path.resolve(path.join(__dirname, './src/themes.scss'))}"; $default-theme: consumer; $bundled-themes: mock, consumer;`,
           },
         }],
       }),
