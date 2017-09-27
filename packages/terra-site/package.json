@@ -35,7 +35,7 @@
     "react-redux": "^5.0.4",
     "react-router": "^3.0.5",
     "redux": "^3.6.0",
-    "cerner-consumer-card-theme": "file:../../../cerner-consumer-card-theme",
+    "cerner-consumer-card-theme": "git+https://github.cerner.com/BJ031910/cerner-consumer-card-theme.git",
     "terra-alert": "^1.7.0",
     "terra-app-delegate": "^1.5.0",
     "terra-arrange": "^1.10.0",
