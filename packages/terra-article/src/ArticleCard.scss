@@ -1,0 +1,14 @@
+@import '~terra-mixins';
+@import './themes';
+
+:local {
+  .article-card {
+    height: 750px;
+    width: 400px;
+
+    .featured-article {
+      height: 400px;
+      width: 750px;
+    }
+  }
+}
