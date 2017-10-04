@@ -45,10 +45,10 @@ const ArticleCard = ({
   const articleButton = <Button href={link} text={'Read More'} isBlock={true} />;
   const articleHeadline = <Heading level={1}>{headline}</Heading>;
   const articleBody = <Text fontSize={18}>{abstract}</Text>;
-  const articleContent = <div>{articleHeadline}{articleBody}</div>;
+  const articleContent = <div>{articleHeadline}{articleBody}{articleButton}</div>;
 
   if (isFeatured) {
-    return <Arrange className={articleCardClassNames} fitStart={articleImage} fill={articleContent} fitEnd={articleButton} />;
+    return <Arrange className={articleCardClassNames} fitStart={articleImage} fill={articleContent} />;
   } else {
     return <div className={articleCardClassNames}>
         <Card>

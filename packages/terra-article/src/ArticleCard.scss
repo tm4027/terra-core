@@ -9,11 +9,15 @@
 
   .featured-article {
     height: 400px;
-    width: 750px;
+    width: 950px;
+
+    border-style: solid;
+    border-width: thin;
 
     >div {
       max-height: 100%;
       max-width: 100%;
+      padding-left: 1em;
     }
   }
 }
