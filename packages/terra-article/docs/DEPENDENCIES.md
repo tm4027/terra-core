@@ -5,6 +5,7 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
+| terra-arrange | ^1.11.0 | ^15.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-base | ^2.5.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-button | ^1.10.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-card | ^1.5.0 | ^15.4.2 | Card is a basic container with some base styling to help seperate elements with different content |

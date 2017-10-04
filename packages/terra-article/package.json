@@ -43,7 +43,8 @@
     "terra-card": "^1.5.0",
     "terra-image": "^1.10.0",
     "terra-text": "^1.10.0",
-    "terra-mixins": "^1.11.0"
+    "terra-mixins": "^1.11.0",
+    "terra-arrange": "^1.11.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -5,10 +5,15 @@
   .article-card {
     height: 750px;
     width: 400px;
+  }
 
-    .featured-article {
-      height: 400px;
-      width: 750px;
+  .featured-article {
+    height: 400px;
+    width: 750px;
+
+    >div {
+      max-height: 100%;
+      max-width: 100%;
     }
   }
 }
