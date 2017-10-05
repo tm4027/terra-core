@@ -43,19 +43,20 @@ const ArticleCard = ({
 
   const articleImage = <Image src={image} isFluid={true}></Image>;
   const articleButton = <Button href={link} text={'Read More'} isBlock={true} />;
-  const articleHeadline = <Heading level={1}>{headline}</Heading>;
+  const articleHeadline = <Heading level={1} style={{ color: 'blue' }}>{headline}</Heading>;
   const articleBody = <Text fontSize={18}>{abstract}</Text>;
-  const articleContent = <div>{articleHeadline}{articleBody}{articleButton}</div>;
+  const articleCardContent = <div>{articleHeadline}{articleBody}</div>;
+  const articleCardFeaturedContent = <div>{articleHeadline}{articleBody}{articleButton}</div>;
 
   if (isFeatured) {
-    return <Arrange className={articleCardClassNames} fitStart={articleImage} fill={articleContent} />;
+    return <Arrange className={articleCardClassNames} fitStart={articleImage} fill={articleCardFeaturedContent} />;
   } else {
     return <div className={articleCardClassNames}>
         <Card>
           {articleImage}
           <hr style={{ border: '0 none', borderTop: '1px solid #c8cacb', boxSizing: 'border-box', height: '1px', margin: '0' }} />
           <Card.Body hasPaddingVertical={false}>
-            {articleContent}
+            {articleCardContent}
           </Card.Body>
           <Card.Body hasPaddingVertical={true}>
             {articleButton}
