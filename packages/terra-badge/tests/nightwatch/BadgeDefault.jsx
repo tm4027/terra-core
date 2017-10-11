@@ -3,7 +3,10 @@ import Badge from '../../lib/Badge';
 
 
 const BadgeDefault = () => (
-  <Badge text="Default" id="default-badge" />
+  <div>
+    <Badge text="Default" id="default-badge" />
+    <img src="" />
+  </div>
 );
 
 export default BadgeDefault;

@@ -14,4 +14,15 @@ if (isRepoTest) {
 
 const config = nightwatchConfig(webpackConfig, srcFolders);
 
+
+if (isRepoTest) {
+  config.custom_commands_path = [
+    './node_modules/nightwatch-axe/src/commands',
+  ];
+} else {
+  config.custom_commands_path = [
+    '../../node_modules/nightwatch-axe/src/commands',
+  ];
+}
+
 module.exports = config;
