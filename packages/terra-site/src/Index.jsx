@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
+/* eslint-disable import/no-extraneous-dependencies */
+import 'theme-repo-test';
+// import 'theme-repo-test/theme';
+// console.log(theme.themeName);
+
 import App from './App';
 import Home from './Home';
 
