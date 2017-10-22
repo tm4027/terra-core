@@ -23,4 +23,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays an image that failed to load': (browser) => {
     browser.waitForElementPresent('#errorImage', 1000);
   },
+
+  'Displays an accessible image': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/image-tests/loading`);
+
+    browser.axeInject();
+    browser.axeRun('html');
+  },
 });

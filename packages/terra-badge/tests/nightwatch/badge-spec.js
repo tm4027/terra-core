@@ -10,19 +10,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#default-badge span').text.to.equal('Default');
   },
 
-  'Displays an accessible badge': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/badge-tests/default`);
-
-    browser.axeInject();
-    browser.axeRun('html', {
-      rules: {
-        'color-contrast': { enabled: false },
-      },
-    });
-  },
-
-  /*
-
   'Displays intent badges': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/badge-tests/intent`);
 
@@ -67,5 +54,4 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#no-text *:nth-child(1)').to.have.attribute('class').which.contains('terra-Icon');
     browser.expect.element('#no-text *:nth-child(2)').to.not.be.present;
   },
-  */
 });
