@@ -3,6 +3,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const postCssConfig = require('./postcss.config');
+const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin');
+const PostCSSCustomProperties = require('postcss-custom-properties');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -55,6 +57,13 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name]-[hash].css'),
+    new PostCSSAssetsPlugin({
+      test: /\.css$/,
+      log: false,
+      plugins: [
+        PostCSSCustomProperties({ preserve: true }),
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['babel-polyfill', 'terra-core'],

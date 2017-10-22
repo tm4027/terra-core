@@ -27,6 +27,7 @@
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
   },
   "dependencies": {
+    "cerner-clinical-theme": "file:../../../cerner-clinical-theme",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "postcss": "^6.0.9",
@@ -100,7 +101,8 @@
     "html-webpack-plugin": "^2.30.0",
     "json-loader": "^0.5.7",
     "node-sass": "^4.5.2",
-    "postcss-custom-properties": "^6.0.1",
+    "postcss-assets-webpack-plugin": "^1.1.0",
+    "postcss-custom-properties": "^6.2.0",
     "postcss-loader": "^2.0.6",
     "postcss-rtl": "^1.1.2",
     "raw-loader": "^0.5.1",

@@ -9,8 +9,8 @@ import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
 import ThemeProvider from 'terra-theme-provider';
 import CollapsibleMenuView from 'terra-collapsible-menu-view';
+import CernerClinicalTheme from 'cerner-clinical-theme/theme';
 import styles from './site.scss';
-
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
 import ListComponentNavigation from './examples/list/ListComponentNavigation';
 import IconComponentNavigation from './examples/icon/IconComponentNavigation';
@@ -24,6 +24,7 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 const themes = {
   'Default Theme': '',
   'Consumer Theme': 'cerner-consumer-theme',
+  'Clinical Theme': CernerClinicalTheme.themeName,
   'Mock Theme': 'cerner-mock-theme',
 };
 
@@ -120,6 +121,7 @@ class App extends React.Component {
             <CollapsibleMenuView.ItemGroup isSelectable key="theme-options" onChange={this.handleThemeChange} >
               <CollapsibleMenuView.Item id="Default Theme" text="Default Theme" key="default" isSelected={this.state.theme === 'Default Theme'} />
               <CollapsibleMenuView.Item id="Consumer Theme" text="Consumer Theme" key="consumer" isSelected={this.state.theme === 'Consumer Theme'} />
+              <CollapsibleMenuView.Item id="Clinical Theme" text="Clinical Theme" key="clinical" isSelected={this.state.theme === 'Clinical Theme'} />
               <CollapsibleMenuView.Item id="Mock Theme" text="Mock Theme" key="mock" isSelected={this.state.theme === 'Mock Theme'} />
             </CollapsibleMenuView.ItemGroup>,
           ]}
